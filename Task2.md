@@ -2,9 +2,9 @@
 Задача №2.
 
 Имеется 3 таблицы: info, data, link, есть запрос для получения данных:
-
+'''
 select * from data.link,info where link.info_id = info.id and link.data_id = data.id
-
+'''
 
 предложить варианты оптимизации:
 ·	таблиц
@@ -30,7 +30,7 @@ CREATE TABLE `link` (
         `info_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
 
-Ответ:
+Ответы:
 1. В самом запросе лучше не использовать *,  а перечислить конкретные поля выборки
 2. Создать индексы. Например изменить таблицу link
 
